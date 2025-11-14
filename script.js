@@ -1,4 +1,4 @@
-const telefone = '5548999725267';
+const telefone = '5544991472631';
 
 function enviarWhats(event) {
     // Evitar comportamento de envio de formulário padrão
@@ -7,7 +7,7 @@ function enviarWhats(event) {
     // Obtenha os valores atuais dos campos de entrada dentro da função
     const nome = document.getElementById('nome').value;
     const mensagem = document.getElementById('mensagem').value;
-    const texto = `Olá! Juliana me chamo ${nome}, ${mensagem}`;
+    const texto = `Olá! Me chamo ${nome}, ${mensagem}`;
     const msgnFormatada = encodeURIComponent(texto);
 
     const url = `https://wa.me/${telefone}?text=${msgnFormatada}`;
@@ -46,3 +46,19 @@ document.addEventListener('DOMContentLoaded', function() {
     nextButton.addEventListener('click', () => scrollCarousel('next'));
 });
 
+// CÓDIGO JAVASCRIPT
+function alternarTexto(idConteudo, botao) {
+    const conteudo = document.getElementById(idConteudo);
+    const paragrafoPai = botao.parentElement;
+
+    // Alterna a visibilidade do conteúdo
+    if (conteudo.style.display === "none" || conteudo.style.display === "") {
+        conteudo.style.display = "inline"; // Mostra o conteúdo
+        botao.textContent = "Ler Menos"; // Muda o texto do botão
+        paragrafoPai.classList.add('expandido'); // Adiciona classe para estilização, se necessário
+    } else {
+        conteudo.style.display = "none"; // Esconde o conteúdo
+        botao.textContent = "Ler Mais"; // Muda o texto do botão
+        paragrafoPai.classList.remove('expandido'); // Remove classe
+    }
+}

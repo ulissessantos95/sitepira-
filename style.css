@@ -10,20 +10,23 @@ html {
   scroll-behavior: smooth;
 }
 
+
+
 :root {
   --primaria: #f8f7e8;
   --secundaria: #ddb151;
   --verdeclaro: #20da20;
   --verdeescuro: #1f961f;
+  --vermelho:  #ff3131;
   --claro: #f7f7f7;
-  --padrao: #daa520;
-  --maisescuro: #18181a;
+  --padrao: #dadd2d;
+  --maisescuro: #050530;
   --escuro: #373f4b;
   --vidro: rgb(243, 243, 237);
 }
 
 body {
-  background-color: var(--claro);
+  background: linear-gradient(45deg, var(--claro));
   color: var(--escuro);
 }
 
@@ -31,37 +34,37 @@ body {
 .navegacao {
   position: fixed;
   top: 0;
-  background: rgba(146, 144, 27, 0.849);
+  background: linear-gradient(45deg, var(--verdeclaro), var(--vermelho), var(--escuro));
   width: 100%;
   z-index: 100;
-  padding: 1.2rem;
+  padding: 1.9rem;
 }
 
 .menu {
   display: flex;
   justify-content: center;
   list-style: none;
-  gap: 19rem;
+  gap: 25rem;
 }
 
 .menu-link {
   text-decoration: none;
-  font-size: larger;
-  font-style: italic;
-  color: var(--escuro);
-  font-weight: 600;
+  font-size: 25px;
+  font-style: oblique;
+  color: var(--claro);
+  font-weight: 700;
   position: relative;
-  padding: 0.5rem 0;
+  padding: 0.8rem 0;
 }
 
 .menu-link::after {
   content: '';
-  height: 2px;
+  height: 10px;
   width: 0;
   position: absolute;
   bottom: 0;
   left: 0;
-  background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+  background: linear-gradient(45deg, var(--verdeclaro), var(--vermelho), var(--escuro));
   transition: width 0.5s ease;
 }
 
@@ -71,24 +74,26 @@ body {
 
 /* Seção do Cabeçalho */
 .cabecalho {
-  min-height: 100vh;
+  min-height: 90vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   /* Permite que o conteúdo se empilhe */
   justify-content: center;
   align-items: center;
-  padding: 6rem 2rem;
+  padding: 6rem 5rem;
   /* Adiciona um pouco de preenchimento */
 }
 
 .foto-perfil {
-  width: 360px;
-  height: 360px;
+  width: 350px;
+  height: 350px;
   display: block;
   margin: 0 auto;
-  box-shadow: 0 0 40px rgba(94, 77, 3, 0.849);
-  border: 2px solid var(--vidro);
+  /* NOVO: Adiciona espaço apenas acima do elemento */
+  margin-top: 50px; 
+  box-shadow: 0 0 60px rgba(59, 117, 32, 0.986);
+  border: 8px solid var(--vidro);
   animation: flutuar 8s ease-in-out infinite;
   border-radius: 50%;
   /* object-fit: cover; */
@@ -96,25 +101,25 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 5rem;
+  font-size: 3rem;
   font-style: italic;
   color: var(--escuro);
   font-weight: bold;
-  margin: 20px 0;
+  margin: 25px 0;
   /* Ajusta a margem para responsividade */
 }
 
 .cabecalho-sub-titulo {
-  font-size: 1.5rem;
-  color: var(--escuro);
-  text-align: center;
-  font-style: italic;
-  max-width: 1000px;
-  width: 90%;
-  /* Usa porcentagem para a largura */
+  padding: 8rem;
+  max-width: 1250px;
   margin: 0 auto;
-  line-height: 1.3;
-  color: #333;
+  font-size: 3vh;
+  margin-top: 115px;
+  color: #f7f7f7;
+  border-radius: 50px;
+  border: 1px solid var(--escuro);
+  backdrop-filter: blur(10px);
+  background: linear-gradient(45deg, var(--verdeclaro), var(--vermelho), var(--escuro));
 }
 
 /* Carrossel de Projetos */
@@ -143,7 +148,7 @@ h1 {
 
 .projetos-card2 {
   flex: 0 0 auto;
-  margin-right: 25px;
+  margin-right: 15px;
   width: 400px;
   height: 400px;
   border-radius: 60px;
@@ -158,7 +163,7 @@ h1 {
   text-align: center;
   font-size: 2.9rem;
   font-style: italic;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .projetos-img-carrossel {
@@ -211,14 +216,19 @@ h1 {
 }
 
 .sobre-caixa {
-  padding: 2rem;
-  max-width: 950px;
+  padding: 3rem;
+  max-width: 1150px;
   margin: 0 auto;
-  border-radius: 85px;
+  font-size: 8vh;
+  margin-top: 115px;
+  color: #f7f7f7;
+  border-radius: 20px;
   border: 1px solid var(--escuro);
-  backdrop-filter: blur(10px);
-  background: rgba(211, 193, 113, 0.849);
+  backdrop-filter: blur(5px);
+  background: linear-gradient(45deg, var(--verdeclaro), var(--vermelho), var(--escuro));
 }
+
+
 
 .sobre-paragrafo {
   text-align: center;
@@ -235,42 +245,79 @@ h1 {
 .projetos-titulo {
   text-align: center;
   font-style: italic;
-  padding-top: 120px;
-  font-size: 2.5rem;
-  margin-bottom: 40px;
+  padding-top: 250px;
+  font-size: 7.5rem;
+  margin-bottom: 50px;
 }
 
 .projetos-card:hover {
-  box-shadow: 0 10px 20px rgba(143, 117, 3, 0.849);
+  box-shadow: 0 10px 20px rgba(28, 100, 46, 0.849);
   transform: translateY(-10px) scale(1.03);
 }
 
 .projetos-caixas {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  /* Largura mínima de 300px mantém os cartões legíveis */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  /* Reduz o espaçamento entre as caixas para compactar o layout */
+  gap: 1.5rem; 
+  /* Aumenta para uma largura padrão para permitir que as colunas sejam visíveis */
+  max-width: 1000px; 
+  margin: 30px auto;
 }
 
 .projetos-imagem {
-  height: 40vh;
-  width: 100%;
-  /* object-fit: cover; */
-  /* Alterado para 'cover' para melhor dimensionamento da imagem */
+  /* REDUZIDO: Altura da imagem de 250px para 200px (diminui a altura total do card) */
+  height: 900px; 
+  width: 90%; 
 }
 
 .projetos-card {
-  background: rgba(211, 193, 113, 0.849);
-  border-radius: 16px;
-  backdrop-filter: blur(26px);
-  border: 2px solid var(--padrao);
+  background: linear-gradient(45deg, var(--verdeclaro), var(--vermelho), var(--escuro));
+  /* REDUZIDO: Borda mais suave e compacta */
+  border-radius: 55px; 
+
+   padding: 1rem;
+  max-width: 950px;
+  margin: 0 auto;
+  font-size: 3vh;
+  margin-top: 115px;
+  color: #f7f7f7;
+  border-radius: 50px;
+  border: 1px solid var(--escuro);
+  
+  
+
+  backdrop-filter: blur(25px);
+  border: 3px solid var(--padrao);
   overflow: hidden;
+  /* Transição mais rápida */
   transition: all 0.5s ease;
+}
+/* NOVO CSS PARA O BOTÃO E O CONTEÚDO ESCONDIDO */
+.conteudo-escondido {
+    /* Inicialmente, esconde o texto que deve ser revelado */
+    display: none; 
+}
+
+.botao-ler-mais {
+    background: none;
+    border: none;
+    color: #dbe9dc; /* Cor que destaca, você pode usar a cor da sua variável */
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0;
+    margin-left: 8px;
+    display: inline; /* Garante que fique ao lado do texto */
+}
+
+/* Opcional: Estilização para quando o texto estiver visível (pode ser ajustado no JS) */
+.paragrafo-projetos.expandido .conteudo-escondido {
+    display: inline; /* Torna o texto visível quando a classe 'expandido' for adicionada ao parágrafo */
 }
 
 .caixa-textos-projetos {
-  padding: 1.5rem;
+  padding: 2.2rem;
 }
 
 .paragrafo-projetos {
@@ -281,7 +328,7 @@ h1 {
 
 .info-projetos {
   font-style: italic;
-  margin-bottom: 15px;
+  margin-bottom: 45px;
 }
 
 /* Seção de Contato */
@@ -297,11 +344,11 @@ h1 {
 }
 
 .formulario-contato {
-  max-width: 600px;
+  max-width: 750px;
   margin: 0 auto;
-  background: rgba(211, 193, 113, 0.849);
+  background: linear-gradient(45deg, var(--verdeclaro), var(--vermelho), var(--escuro));
   backdrop-filter: blur(5px);
-  padding: 2rem;
+  padding: 3rem;
   border: 1px solid var(--vidro);
   border-radius: 16px;
 }
@@ -331,7 +378,7 @@ h1 {
 .botao-form {
   font-style: italic;
   color: var(--claro);
-  background: linear-gradient(45deg, var(--verdeclaro), var(--verdeescuro));
+  background: linear-gradient(45deg, var(--verdeclaro), var(--verdeclaro));
   padding: 1rem 2rem;
   border: none;
   border-radius: 8px;
@@ -357,8 +404,8 @@ h1 {
   z-index: -1;
   opacity: 0.5;
   background:
-    radial-gradient(circle at 10% 20%, var(--secundaria) 0%, transparent 20%),
-    radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%),
+    radial-gradient(circle at 10% 20%, var(--verdeclaro) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, var(--verdeescuro) 0%, transparent 20%),
     var(--primaria);
 }
 
@@ -472,7 +519,7 @@ footer a p {
   }
 
   .projetos-imagem{
-    height: 300px;
+    height: 140px;
   }
 
   .contatos {
