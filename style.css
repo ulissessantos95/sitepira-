@@ -228,8 +228,6 @@ h1 {
   background: linear-gradient(45deg, var(--verdeclaro), var(--vermelho), var(--escuro));
 }
 
-
-
 .sobre-paragrafo {
   text-align: center;
   font-style: italic;
@@ -253,6 +251,22 @@ h1 {
 .projetos-card:hover {
   box-shadow: 0 10px 20px rgba(28, 100, 46, 0.849);
   transform: translateY(-10px) scale(1.03);
+}
+
+.projetos-caixas {
+  display: grid;
+  /* REDUZIDO: A largura mínima de 350px para 300px torna os cartões mais estreitos */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 1.5rem; /* Espaçamento reduzido */
+  max-width: 1100px; /* Largura máxima reduzida */
+  margin: 30px auto;
+}
+
+.projetos-imagem {
+  /* REDUZIDO: Altura da imagem de 250px para 200px (diminui a altura total do card) */
+  height: px; 
+  width: 100%;
+  object-fit: cover; 
 }
 
 .projetos-caixas {
@@ -315,6 +329,7 @@ h1 {
 .paragrafo-projetos.expandido .conteudo-escondido {
     display: inline; /* Torna o texto visível quando a classe 'expandido' for adicionada ao parágrafo */
 }
+
 
 .caixa-textos-projetos {
   padding: 2.2rem;
