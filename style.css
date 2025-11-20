@@ -14,27 +14,26 @@ html {
 
 :root {
   --primaria: #f8f7e8;
-  --secundaria: #ddb151;
   --verdeclaro: #20da20;
   --verdeescuro: #1f961f;
   --vermelho:  #ff3131;
-  --claro: #f7f7f7;
-  --padrao: #dadd2d;
-  --maisescuro: #050530;
-  --escuro: #373f4b;
+--LaranjaVivo: #e07712;
+--MarromAvermelhado: #b44636;
+--MarromEscuro: #56382d;
+--VerdeEscuroOliva: #2f4c1e;
+--VerdeEscuroFloresta: #061b04;
   --vidro: rgb(243, 243, 237);
 }
 
 body {
-  background: linear-gradient(45deg, var(--claro));
-  color: var(--escuro);
+   background: linear-gradient(68deg, var(--VerdeEscuroOliva),  var(--VerdeEscuroFloresta), var(--VerdeEscuroFloresta));
 }
 
 /* Barra de Navegação */
 .navegacao {
   position: fixed;
   top: 0;
-  background: linear-gradient(45deg, var(--verdeclaro), var(--vermelho), var(--escuro));
+  background: linear-gradient(95deg, var(--VerdeEscuroFloresta), var(--VerdeEscuroOliva), var(--MarromAvermelhado));
   width: 100%;
   z-index: 100;
   padding: 1.9rem;
@@ -44,15 +43,15 @@ body {
   display: flex;
   justify-content: center;
   list-style: none;
-  gap: 25rem;
+  gap: 20rem;
 }
 
 .menu-link {
   text-decoration: none;
-  font-size: 25px;
-  font-style: oblique;
-  color: var(--claro);
-  font-weight: 700;
+  font-size: 26px;
+  font-family: 'Open Sans', sans-serif;
+  color: var(--primaria);
+  font-weight: 600;
   position: relative;
   padding: 0.8rem 0;
 }
@@ -64,8 +63,8 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: linear-gradient(45deg, var(--verdeclaro), var(--vermelho), var(--escuro));
-  transition: width 0.5s ease;
+  background: linear-gradient(35deg, var(--VerdeEscuroOliva), var(--MarromAvermelhado));
+  transition: width 0.9s ease;
 }
 
 .menu-link:hover::after {
@@ -86,24 +85,24 @@ body {
 }
 
 .foto-perfil {
-  width: 350px;
-  height: 350px;
+  width: 360px;
+  height: 360px;
   display: block;
   margin: 0 auto;
   /* NOVO: Adiciona espaço apenas acima do elemento */
-  margin-top: 50px; 
-  box-shadow: 0 0 60px rgba(59, 117, 32, 0.986);
-  border: 8px solid var(--vidro);
-  animation: flutuar 8s ease-in-out infinite;
+  margin-top: 45px; 
+  box-shadow: 0 0 20px rgba(193, 228, 177, 0.986);
+  border: 5px solid var(--VerdeEscuroOliva);
+  animation: flutuar 7s ease-in-out infinite;
   border-radius: 50%;
   /* object-fit: cover; */
 }
 
 h1 {
   text-align: center;
-  font-size: 3rem;
-  font-style: italic;
-  color: var(--escuro);
+  font-size: 4rem;
+  font-family: 'Open Sans', sans-serif;
+  color: var(--MarromAvermelhado);
   font-weight: bold;
   margin: 25px 0;
   /* Ajusta a margem para responsividade */
@@ -119,7 +118,7 @@ h1 {
   border-radius: 50px;
   border: 1px solid var(--escuro);
   backdrop-filter: blur(10px);
-  background: linear-gradient(45deg, var(--verdeclaro), var(--vermelho), var(--escuro));
+  background: linear-gradient(68deg, var(--VerdeEscuroOliva),  var(--VerdeEscuroFloresta), var(--MarromAvermelhado));
 }
 
 /* Carrossel de Projetos */
@@ -129,7 +128,7 @@ h1 {
   margin: 0 auto;
   overflow: hidden;
   padding: 9px 1;
-  border: solid var(--padrao);
+  border: solid var(--VerdeEscuroOliva);
   border-radius: 70px;
 }
 
@@ -140,6 +139,7 @@ h1 {
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  
 }
 
 .projetos-corrosel::-webkit-scrollbar {
@@ -153,7 +153,7 @@ h1 {
   height: 400px;
   border-radius: 60px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(92, 91, 89, 0.849);
+  box-shadow: 0 4px 10px rgba(26, 68, 35, 0.849);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -162,7 +162,7 @@ h1 {
 .project-titulo {
   text-align: center;
   font-size: 2.9rem;
-  font-style: italic;
+  font-family: 'Open Sans', sans-serif;
   margin-bottom: 40px;
 }
 
@@ -179,7 +179,7 @@ h1 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(255, 255, 255, 0.952);
   color: white;
   border: none;
   padding: 10px 15px;
@@ -210,8 +210,8 @@ h1 {
 .sobre-titulo {
   padding: 8rem 0 2rem 0;
   font-size: 4rem;
-  font-style: italic;
-  color: var(--escuro);
+  font-family: 'Open Sans', sans-serif;
+  color: var(--MarromAvermelhado);
   text-align: center;
 }
 
@@ -223,26 +223,24 @@ h1 {
   margin-top: 115px;
   color: #f7f7f7;
   border-radius: 20px;
-  border: 1px solid var(--escuro);
+  border: 1px solid var(--primaria);
   backdrop-filter: blur(5px);
   background: linear-gradient(45deg, var(--verdeclaro), var(--vermelho), var(--escuro));
 }
 
 .sobre-paragrafo {
   text-align: center;
-  font-style: italic;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.2rem;
 }
 
-/* Seção Projetos */
 .projetos {
   padding: 0rem 0rem;
-  /* Preenchimento ajustado */
 }
 
 .projetos-titulo {
   text-align: center;
-  font-style: italic;
+  font-family: 'Open Sans', sans-serif;
   padding-top: 250px;
   font-size: 7.5rem;
   margin-bottom: 50px;
@@ -254,64 +252,38 @@ h1 {
 }
 
 .projetos-caixas {
-  display: grid;
-  /* REDUZIDO: A largura mínima de 350px para 300px torna os cartões mais estreitos */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
   gap: 1.5rem; /* Espaçamento reduzido */
   max-width: 1100px; /* Largura máxima reduzida */
   margin: 30px auto;
 }
 
-.projetos-imagem {
-  /* REDUZIDO: Altura da imagem de 250px para 200px (diminui a altura total do card) */
-  height: px; 
-  width: 100%;
-  object-fit: cover; 
-}
 
 .projetos-caixas {
-  display: grid;
-  /* Largura mínima de 300px mantém os cartões legíveis */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-  /* Reduz o espaçamento entre as caixas para compactar o layout */
-  gap: 1.5rem; 
-  /* Aumenta para uma largura padrão para permitir que as colunas sejam visíveis */
-  max-width: 1000px; 
+  gap: 1.8rem; 
   margin: 30px auto;
 }
 
 .projetos-imagem {
-  /* REDUZIDO: Altura da imagem de 250px para 200px (diminui a altura total do card) */
-  height: 900px; 
-  width: 90%; 
+  height: 910px; 
+  width: 100%;
 }
 
 .projetos-card {
-  background: linear-gradient(45deg, var(--verdeclaro), var(--vermelho), var(--escuro));
-  /* REDUZIDO: Borda mais suave e compacta */
-  border-radius: 55px; 
-
-   padding: 1rem;
-  max-width: 950px;
+  max-width: 750px;
   margin: 0 auto;
-  font-size: 3vh;
-  margin-top: 115px;
-  color: #f7f7f7;
-  border-radius: 50px;
-  border: 1px solid var(--escuro);
-  
-  
+  font-size: 4vh;
+  margin-top: 135px;
+  color: var(--MarromAvermelhado);
 
-  backdrop-filter: blur(25px);
-  border: 3px solid var(--padrao);
-  overflow: hidden;
   /* Transição mais rápida */
   transition: all 0.5s ease;
+
+
 }
-/* NOVO CSS PARA O BOTÃO E O CONTEÚDO ESCONDIDO */
+
 .conteudo-escondido {
-    /* Inicialmente, esconde o texto que deve ser revelado */
-    display: none; 
+  display: none; 
 }
 
 .botao-ler-mais {
@@ -321,7 +293,7 @@ h1 {
     cursor: pointer;
     font-weight: bold;
     padding: 0;
-    margin-left: 8px;
+    margin-left: 9px;
     display: inline; /* Garante que fique ao lado do texto */
 }
 
@@ -337,7 +309,7 @@ h1 {
 
 .paragrafo-projetos {
   font-style: italic;
-  color: rgba(243, 242, 237, 0.849);
+  color: var(--MarromEscuro);
   line-height: 1.25rem;
 }
 
@@ -406,22 +378,7 @@ h1 {
 .botao-form:hover {
   transform: translateY(-4px);
   /* Corrigido de --4px */
-  box-shadow: 0 0 20px rgba(190, 163, 43, 0.849);
-}
-
-/* Partículas de Fundo */
-.particulas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  opacity: 0.5;
-  background:
-    radial-gradient(circle at 10% 20%, var(--verdeclaro) 0%, transparent 20%),
-    radial-gradient(circle at 90% 80%, var(--verdeescuro) 0%, transparent 20%),
-    var(--primaria);
+  box-shadow: 0 0 20px rgba(22, 19, 5, 0.849);
 }
 
 /* Animações */
